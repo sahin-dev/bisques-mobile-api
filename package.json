@@ -1,0 +1,20 @@
+{
+  "name": "bisques-mobile-api",
+  "version": "1.0.0",
+  "description": "Api developed using nodejs and express for Flutter based mobile app.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sahin-dev/bisques-mobile-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sahin-dev/bisques-mobile-api/issues"
+  },
+  "homepage": "https://github.com/sahin-dev/bisques-mobile-api#readme"
+}
