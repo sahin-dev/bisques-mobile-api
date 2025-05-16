@@ -1,0 +1,58 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id               String      @id @default(auto()) @map("_id") @db.ObjectId
+  email            String      @unique
+  password         String
+  fcmToken         String?
+  googleId         String?
+  appleId          String?
+  interests        Interests[]
+  gender           Gender?
+  birthdate        DateTime?
+  fullname         String?
+  nickname         String?
+  phone            String?
+  address          String?
+  PIN              String
+  country          String?
+  countryCode      String?
+  image            String?
+  profileCompleted Boolean     @default(false)
+
+  @@map("users")
+}
+
+enum Gender {
+  Male
+  Female
+}
+
+enum Interests {
+  Entertainment
+  Gaming
+  Art
+  Animals
+  Comedy
+  Dance
+  Beauty
+  Music
+  Food_Drink
+  Sports
+  DIY
+  Science_Education
+  Travel
+  Family
+  Anime_Movie
+  Technology
+  Outdoors
+  Culture
+}
